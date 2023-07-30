@@ -7,7 +7,7 @@ app.get('/', async (req, res) => {
     let data = await tiktok.getVideoInfo(req.query.url);
     res.type('json').send(JSON.stringify(data, null, 2) + '\n');
   } else {
-    res.type('json').send(JSON.stringify({ message: "Wheres the url" }, null, 2) + '\n');
+    res.type('json').send(JSON.stringify({ message: "Please input url." }, null, 2) + '\n');
   }
 })
 

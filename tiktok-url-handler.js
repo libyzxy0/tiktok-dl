@@ -22,10 +22,9 @@ const getVideoInfo = async url => {
   return {
     id: res.data.data.id,
     user: res.data.data.author,
-    play: domain + res.data.data.play,
+    url: domain + res.data.data.play,
     wmplay: domain + res.data.data.wmplay,
     hdplay: domain + res.data.data.hdplay,
-    url: `https://shoti-api.libyzxy0.repl.co/video-cdn/${res.data.data.id}`,
     duration: res.data.data.duration,
   }
 }
